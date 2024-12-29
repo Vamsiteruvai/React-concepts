@@ -1,0 +1,41 @@
+{
+  "products": [
+    {
+      "name": "telrgram",
+      "price": 54444,
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "onplus nord ce3",
+      "price": 18999
+    },
+    {
+      "id": "3ed4",
+      "name": "nord ce4",
+      "price": 21000
+    },
+    {
+      "id": "0fda",
+      "name": "nord ce4",
+      "price": 21000
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "name": "moto edge 50 fusion",
+      "count": 12
+    },
+    {
+      "id": "2",
+      "name": "iphone 16pro max",
+      "count": 45
+    },
+    {
+      "id": "3",
+      "name": "onplus nord ce3",
+      "count": 78
+    }
+  ]
+}

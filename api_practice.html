@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getData()">get</button>
+    <button onclick="postData()">post</button>
+    <button onclick="putData()">put</button>
+    <button onclick="deleteData()">delete</button>
+
+    <script>
+        async function getData(){
+            let res=await fetch('http://localhost:3000/products')
+            let data=await res.json()
+            console.log(data)
+        }
+        async function postData(){
+            let res=await fetch('http://localhost:3000/products',{
+                method:'POST',
+                body:JSON.stringify({
+                    id:1,
+                    name:"nord ce4",
+                    price:21000
+                }),
+                headers:{
+                    "content-type":"application/json"
+                }
+            })
+            let data=await res.json()
+            console.log(data)
+        }
+        async function putData(){
+            let res=await fetch('http://localhost:3000/products/2',{
+                method:'PUT',
+                body:JSON.stringify({
+                    name:"telrgram",
+                    price:54444
+                }),
+                headers:{
+                    "content-type":"application/json"
+                }
+            })
+            let data=await res.json()
+            console.log(data)
+        }
+        async function deleteData(){
+            let res=await fetch('http://localhost:3000/products/1',{
+                method:'DELETE'
+            })
+            let data=await res.json()
+            console.log(data)
+        }
+    </script>
+</body>
+</html>
